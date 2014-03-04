@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cUi-kZ-frf">
+            <objects>
+                <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="52"/>
+        </scene>
+        <!--Master View Controller - Master-->
+        <scene sceneID="VgW-fR-Quf">
+            <objects>
+                <tableViewController title="Master" id="pGg-6v-bdr" customClass="THDMasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="t0s-km-Vl9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="qKd-kx-OQp">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Using Responder Methods" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pz-XF-uhl">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="3Ku-hQ-ld1" kind="push" id="9DO-B5-6vF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OUu-wo-wrE" style="IBUITableViewCellStyleDefault" id="2XB-jE-T4V">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2XB-jE-T4V" id="4Zq-Qp-ckO">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Using Gesture Recognizers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUu-wo-wrE">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="vsK-9t-HNu" kind="push" id="xmx-Ec-DrM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
+                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Touches Demo" id="tQt-TN-PWz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="52"/>
+        </scene>
+        <!--Responder Method View Controller - Using Responder Methods-->
+        <scene sceneID="0FY-Ez-17l">
+            <objects>
+                <viewController id="3Ku-hQ-ld1" customClass="THDResponderMethodViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAF-KZ-rcR"/>
+                        <viewControllerLayoutGuide type="bottom" id="eOs-yS-ON6"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="E8D-4b-PQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="&quot;Touches&quot; lets you observe touch" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="koX-GZ-lwe">
+                                <rect key="frame" x="34" y="72" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="phases and multiple taps." textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Esy-TW-WTq">
+                                <rect key="frame" x="69" y="95" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YellowSquare" translatesAutoresizingMaskIntoConstraints="NO" id="5rg-2n-Fx6" userLabel="Yellow">
+                                <rect key="frame" x="10" y="175" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CyanSquare" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-bY-89j" userLabel="Cyan">
+                                <rect key="frame" x="110" y="275" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MagentaSquare" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-k4-FD2" userLabel="Magenta">
+                                <rect key="frame" x="210" y="375" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-Jl-4Nh" userLabel="Top Label">
+                                <rect key="frame" x="160" y="130" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OC5-qs-Lfj" userLabel="Bottom Label">
+                                <rect key="frame" x="171" y="516" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Using Responder Methods" id="PzR-gm-XyY"/>
+                    <connections>
+                        <outlet property="firstPieceView" destination="5rg-2n-Fx6" id="B57-Ua-qVh"/>
+                        <outlet property="secondPieceView" destination="Kxu-bY-89j" id="uDB-gX-hAD"/>
+                        <outlet property="thirdPieceView" destination="CcD-k4-FD2" id="LtD-1q-YkU"/>
+                        <outlet property="touchInfoText" destination="Py1-Jl-4Nh" id="BJY-1j-JHl"/>
+                        <outlet property="touchInstructionsText" destination="OC5-qs-Lfj" id="cZG-NH-Uf2"/>
+                        <outlet property="touchPhaseText" destination="koX-GZ-lwe" id="VWU-vd-XP0"/>
+                        <outlet property="touchTrackingText" destination="Esy-TW-WTq" id="NVY-30-tgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTL-Ey-ZaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-243"/>
+        </scene>
+        <!--Gesture Recognizers View Controller - Using Gesture Recognizers-->
+        <scene sceneID="OIb-ER-trn">
+            <objects>
+                <viewController id="4qV-aI-A12" customClass="THDGestureRecognizersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRM-Ji-39a"/>
+                        <viewControllerLayoutGuide type="bottom" id="cB8-94-gv6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="28v-mO-V4m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="&quot;Touches&quot; shows use of" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-g0-JaO">
+                                <rect key="frame" x="10" y="68" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="UIGestureRecognizers to move pieces." textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mDn-YL-ds4">
+                                <rect key="frame" x="10" y="89" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YellowSquare" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-Qn-9zZ" userLabel="Yellow">
+                                <rect key="frame" x="10" y="139" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="m6D-F6-38h" appends="YES" id="jJM-17-1fW"/>
+                                    <outletCollection property="gestureRecognizers" destination="89o-uE-5OP" appends="YES" id="itf-MU-Z7g"/>
+                                    <outletCollection property="gestureRecognizers" destination="uBa-mW-dZL" appends="YES" id="A2i-M2-HeL"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ath-GM-I0i" appends="YES" id="O8G-fz-kvw"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CyanSquare" translatesAutoresizingMaskIntoConstraints="NO" id="KLe-bk-HPx" userLabel="Cyan">
+                                <rect key="frame" x="110" y="239" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5aa-Ym-Edc" appends="YES" id="Ktb-cB-cVR"/>
+                                    <outletCollection property="gestureRecognizers" destination="89o-uE-5OP" appends="YES" id="lUg-Oi-fcL"/>
+                                    <outletCollection property="gestureRecognizers" destination="qMh-dY-cFX" appends="YES" id="fNH-E2-dDs"/>
+                                    <outletCollection property="gestureRecognizers" destination="eNg-gO-JX3" appends="YES" id="igc-MA-FhP"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MagentaSquare" translatesAutoresizingMaskIntoConstraints="NO" id="jI7-Jb-bpH" userLabel="Magenta">
+                                <rect key="frame" x="210" y="339" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fDe-BH-aoI" appends="YES" id="rEP-yH-tgd"/>
+                                    <outletCollection property="gestureRecognizers" destination="PLJ-GP-KLR" appends="YES" id="kc2-Qw-CI9"/>
+                                    <outletCollection property="gestureRecognizers" destination="VQi-qC-tYS" appends="YES" id="008-Jg-Rzl"/>
+                                    <outletCollection property="gestureRecognizers" destination="in4-Ez-ka7" appends="YES" id="Elp-Ys-7zF"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="m6D-F6-38h" appends="YES" id="Ho5-D2-Z9E"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Using Gesture Recognizers" id="k8D-Ds-Wda"/>
+                    <connections>
+                        <outlet property="firstPieceView" destination="KLe-bk-HPx" id="lsM-Zt-KJP"/>
+                        <outlet property="secondPieceView" destination="KLe-bk-HPx" id="kx9-bP-fC9"/>
+                        <outlet property="thirdPieceView" destination="jI7-Jb-bpH" id="FuJ-xb-SqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIK-KL-0uw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="m6D-F6-38h" userLabel="Yellow Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="4qV-aI-A12" id="Qsd-lX-ZX2"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="5aa-Ym-Edc" userLabel="Blue Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="4qV-aI-A12" id="UO7-CG-UzG"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="fDe-BH-aoI" userLabel="Pink Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="4qV-aI-A12" id="iCj-Yg-Rch"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="89o-uE-5OP" userLabel="Yellow Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="4qV-aI-A12" id="wU2-vi-Jrc"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="4M7-4h-YdQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="MEr-Dv-8H6" userLabel="Blue Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="4qV-aI-A12" id="5k3-gg-15T"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="xCh-g6-xll"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="PLJ-GP-KLR" userLabel="Pink Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="4qV-aI-A12" id="NO9-Ry-buc"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="Rgc-01-fXZ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uBa-mW-dZL" userLabel="Yellow Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="4qV-aI-A12" id="pP3-w7-Jrx"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="3Wt-k4-mcI"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qMh-dY-cFX" userLabel="Blue Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="4qV-aI-A12" id="Mqx-nD-Qb6"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="WpN-Z0-1ZR"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VQi-qC-tYS" userLabel="Pink Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="4qV-aI-A12" id="k3s-Af-pjj"/>
+                        <outlet property="delegate" destination="4qV-aI-A12" id="1hV-N7-n45"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Ath-GM-I0i" userLabel="Yellow Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="4qV-aI-A12" id="fhF-GK-mXa"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="eNg-gO-JX3" userLabel="Blue Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="4qV-aI-A12" id="kBq-3X-aVh"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="in4-Ez-ka7" userLabel="Pink Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="4qV-aI-A12" id="1js-xg-Ad8"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="929" y="537"/>
+        </scene>
+        <!--Gesture Recognizers View Controller - Using Gesture Recognizers-->
+        <scene sceneID="8CC-JT-Y9b">
+            <objects>
+                <viewController id="vsK-9t-HNu" customClass="THDGestureRecognizersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EwH-SO-d0J"/>
+                        <viewControllerLayoutGuide type="bottom" id="mj3-yH-xl3"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5go-Ke-vUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" fixedFrame="YES" image="CyanSquare" translatesAutoresizingMaskIntoConstraints="NO" id="llt-pL-tIo">
+                                <rect key="frame" x="110" y="190" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Aze-wD-7nP" appends="YES" id="UlH-HN-EiM"/>
+                                    <outletCollection property="gestureRecognizers" destination="5OK-95-toT" appends="YES" id="Sft-UE-Gkc"/>
+                                    <outletCollection property="gestureRecognizers" destination="M3I-SP-QDv" appends="YES" id="Jbe-xr-d62"/>
+                                    <outletCollection property="gestureRecognizers" destination="qaj-7C-WmM" appends="YES" id="5ci-sh-AJT"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" fixedFrame="YES" image="MagentaSquare" translatesAutoresizingMaskIntoConstraints="NO" id="lav-4a-9Xy">
+                                <rect key="frame" x="210" y="290" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XIo-Ra-vCJ" appends="YES" id="Xzd-pm-F1U"/>
+                                    <outletCollection property="gestureRecognizers" destination="Yad-0J-nPC" appends="YES" id="wSN-h3-Tds"/>
+                                    <outletCollection property="gestureRecognizers" destination="cPH-6Y-8dY" appends="YES" id="fkM-k5-Rc4"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jtc-ZC-Lfs" appends="YES" id="52E-rE-yGE"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="center" fixedFrame="YES" image="YellowSquare" translatesAutoresizingMaskIntoConstraints="NO" id="sDr-nz-Uea">
+                                <rect key="frame" x="10" y="90" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hqE-GL-ESv" appends="YES" id="l30-eH-Wqm"/>
+                                    <outletCollection property="gestureRecognizers" destination="kJ8-3B-l5C" appends="YES" id="w5Y-IY-oqZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="I3d-mq-6YZ" appends="YES" id="wHe-dc-8pC"/>
+                                    <outletCollection property="gestureRecognizers" destination="n82-8h-yw1" appends="YES" id="lzz-BQ-Isa"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="&quot;Touches&quot; shows use of" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bU6-DU-bfc">
+                                <rect key="frame" x="10" y="24" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="UIGestureRecognizers to move pieces." textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-Hg-3qG">
+                                <rect key="frame" x="10" y="45" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Using Gesture Recognizers" id="dlP-Oc-7FF"/>
+                    <connections>
+                        <outlet property="firstPieceView" destination="sDr-nz-Uea" id="HIh-wD-KkB"/>
+                        <outlet property="secondPieceView" destination="llt-pL-tIo" id="Zul-cN-VuA"/>
+                        <outlet property="thirdPieceView" destination="lav-4a-9Xy" id="KsN-kR-hPb"/>
+                        <outlet property="view" destination="5go-Ke-vUQ" id="wsa-pP-Z66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tau-gO-UfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="hqE-GL-ESv" userLabel="Yellow Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="vsK-9t-HNu" id="aIL-8B-olZ"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="Aze-wD-7nP" userLabel="Blue Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="vsK-9t-HNu" id="h1P-XU-Zg2"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="XIo-Ra-vCJ" userLabel="Pink Rotation Gesture Recognizer">
+                    <connections>
+                        <action selector="rotatePiece:" destination="vsK-9t-HNu" id="tim-gq-FQe"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="kJ8-3B-l5C" userLabel="Yellow Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="vsK-9t-HNu" id="lIZ-M5-LuD"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="tQr-Uk-2sr"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="5OK-95-toT" userLabel="Blue Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="vsK-9t-HNu" id="2hb-A4-AnE"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="Zl8-60-L0Q"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="Yad-0J-nPC" userLabel="Pink Pinch Gesture Recognizer">
+                    <connections>
+                        <action selector="scalePiece:" destination="vsK-9t-HNu" id="0hL-G9-sSO"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="W6e-df-GGQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="I3d-mq-6YZ" userLabel="Yellow Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="vsK-9t-HNu" id="cST-84-t54"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="hAl-s5-zc1"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="M3I-SP-QDv" userLabel="Blue Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="vsK-9t-HNu" id="oaO-po-ycP"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="Dgt-mG-ne0"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="cPH-6Y-8dY" userLabel="Pink Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="panPiece:" destination="vsK-9t-HNu" id="Ozi-LQ-fkf"/>
+                        <outlet property="delegate" destination="vsK-9t-HNu" id="Jq6-tM-CSF"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="n82-8h-yw1" userLabel="Yellow Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="vsK-9t-HNu" id="gS4-ye-sFT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="qaj-7C-WmM" userLabel="Blue Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="vsK-9t-HNu" id="UeV-cZ-dts"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Jtc-ZC-Lfs" userLabel="Pink Long Press Gesture Recognizer">
+                    <connections>
+                        <action selector="showResetMenu:" destination="vsK-9t-HNu" id="vPi-dj-amg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1379" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CyanSquare" width="100" height="100"/>
+        <image name="MagentaSquare" width="100" height="100"/>
+        <image name="YellowSquare" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
