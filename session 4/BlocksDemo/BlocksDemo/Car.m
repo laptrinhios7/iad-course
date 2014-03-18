@@ -13,14 +13,25 @@
 
 @synthesize odometer = _odometer;
 
+//- (void)driveForDuration:(double)duration
+//       withVariableSpeed:(double (^)(double time))speedFunction
+//                   steps:(int)numSteps
+//{
+//    double dt = duration / numSteps;
+//    for (int i = 1; i <= numSteps; i++)
+//    {
+//        _odometer += speedFunction(i * dt) * dt;
+//    }
+
 - (void)driveForDuration:(double)duration
-       withVariableSpeed:(double (^)(double time))speedFunction
+       withVariableSpeed:(SpeedFunction)speedFunction
                    steps:(int)numSteps
 {
     double dt = duration / numSteps;
     for (int i = 1; i <= numSteps; i++)
     {
         _odometer += speedFunction(i * dt) * dt;
+        
     }
 }
 
