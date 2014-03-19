@@ -61,7 +61,8 @@ int main(int argc, const char * argv[])
         // "Protected" methods have not been imported, so this will not work
         //[porsche prepareToDrive];
         
-        SEL protectedMethod = @selector(prepareToDrive);
+        //SEL protectedMethod = @selector(prepareToDrive);
+        SEL protectedMethod = NSSelectorFromString(@"prepareToDrive");
         if ([porsche respondsToSelector:protectedMethod])
         {
             // This will work

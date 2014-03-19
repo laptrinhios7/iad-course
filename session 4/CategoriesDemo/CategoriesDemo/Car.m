@@ -10,25 +10,13 @@
 #import "Car.h"
 #import "Car+Protected.h"
 
-// The class extension
-@interface Car ()
-
-- (BOOL)engineIsWorking;
-
-@end
-
 @implementation Car
 
 @synthesize model = _model;
 
-- (BOOL)engineIsWorking {
-    // In the real world, this would probably return a useful value
-    return YES;
-}
-- (void)startEngine {
-    if ([self engineIsWorking]) {
-        NSLog(@"Starting the %@'s engine", _model);
-    }
+- (void)startEngine
+{
+    NSLog(@"Starting the %@'s engine", _model);
 }
 
 - (void)drive

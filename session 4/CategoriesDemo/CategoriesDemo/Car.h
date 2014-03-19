@@ -19,6 +19,4 @@
 - (void)turnLeft;
 - (void)turnRight;
 
-- (BOOL)engineIsWorking;
-
 @end
