@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CollectionViewDemo-Simple/CollectionViewDemo-Simple.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CollectionViewDemo-CustomCell/CollectionViewDemo-CustomCell.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CollectionViewDemo-PhotoAlbum/CollectionViewDemo-PhotoAlbum.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CollectionViewDemo-BookShelf/CollectionViewDemo-BookShelf.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CollectionViewDemo-CoverFlow/CollectionViewDemo-CoverFlow.xcodeproj">
+   </FileRef>
+</Workspace>
