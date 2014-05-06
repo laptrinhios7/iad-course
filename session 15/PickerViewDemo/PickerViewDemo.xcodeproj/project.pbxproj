@@ -22,7 +22,7 @@
 		801704D718372B18006DA794 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801704B618372B18006DA794 /* UIKit.framework */; };
 		801704DF18372B19006DA794 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 801704DD18372B19006DA794 /* InfoPlist.strings */; };
 		801704E118372B19006DA794 /* PickerViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 801704E018372B19006DA794 /* PickerViewDemoTests.m */; };
-		8099D07C18376E9E00DAB7E9 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8099D07B18376E9E00DAB7E9 /* Countries.plist */; };
+		80B541581918D43500057429 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B541571918D43500057429 /* Countries.plist */; };
 		80C8CEE61839C3B500E532BF /* PVDDateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C8CEE51839C3B500E532BF /* PVDDateCellViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		801704DC18372B19006DA794 /* PickerViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PickerViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		801704DE18372B19006DA794 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		801704E018372B19006DA794 /* PickerViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewDemoTests.m; sourceTree = "<group>"; };
-		8099D07B18376E9E00DAB7E9 /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Countries.plist; path = ../../../../../../../../../../../Users/lamvt/Downloads/Countries.plist; sourceTree = "<group>"; };
+		80B541571918D43500057429 /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
 		80C8CEE41839C3B500E532BF /* PVDDateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVDDateCellViewController.h; sourceTree = "<group>"; };
 		80C8CEE51839C3B500E532BF /* PVDDateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVDDateCellViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +138,7 @@
 		801704B918372B18006DA794 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8099D07B18376E9E00DAB7E9 /* Countries.plist */,
+				80B541571918D43500057429 /* Countries.plist */,
 				801704BA18372B18006DA794 /* PickerViewDemo-Info.plist */,
 				801704BB18372B18006DA794 /* InfoPlist.strings */,
 				801704BE18372B18006DA794 /* main.m */,
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				801704CE18372B18006DA794 /* Images.xcassets in Resources */,
-				8099D07C18376E9E00DAB7E9 /* Countries.plist in Resources */,
+				80B541581918D43500057429 /* Countries.plist in Resources */,
 				801704BD18372B18006DA794 /* InfoPlist.strings in Resources */,
 				801704C618372B18006DA794 /* Main.storyboard in Resources */,
 			);
