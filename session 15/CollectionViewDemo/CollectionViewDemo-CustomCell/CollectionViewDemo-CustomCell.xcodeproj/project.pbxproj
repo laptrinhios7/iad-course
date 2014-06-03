@@ -22,6 +22,7 @@
 		8049479E183B596200CE43ED /* CVDCustomCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8049479D183B596200CE43ED /* CVDCustomCollectionViewController.m */; };
 		804947A1183B621300CE43ED /* CVDCustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 804947A0183B621300CE43ED /* CVDCustomCollectionCell.m */; };
 		804947A7183B84FC00CE43ED /* CVDCustomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804947A6183B84FC00CE43ED /* CVDCustomCollectionCell.xib */; };
+		80B5415A1918DCFC00057429 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B541591918DCFC00057429 /* Empty.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8049479F183B621300CE43ED /* CVDCustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVDCustomCollectionCell.h; sourceTree = "<group>"; };
 		804947A0183B621300CE43ED /* CVDCustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVDCustomCollectionCell.m; sourceTree = "<group>"; };
 		804947A6183B84FC00CE43ED /* CVDCustomCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVDCustomCollectionCell.xib; sourceTree = "<group>"; };
+		80B541591918DCFC00057429 /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				8049479F183B621300CE43ED /* CVDCustomCollectionCell.h */,
 				804947A0183B621300CE43ED /* CVDCustomCollectionCell.m */,
 				804947A6183B84FC00CE43ED /* CVDCustomCollectionCell.xib */,
+				80B541591918DCFC00057429 /* Empty.xib */,
 			);
 			path = "CollectionViewDemo-CustomCell";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				804947A7183B84FC00CE43ED /* CVDCustomCollectionCell.xib in Resources */,
+				80B5415A1918DCFC00057429 /* Empty.xib in Resources */,
 				80494780183B58AA00CE43ED /* Images.xcassets in Resources */,
 				80494772183B58AA00CE43ED /* InfoPlist.strings in Resources */,
 			);

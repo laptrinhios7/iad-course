@@ -73,19 +73,21 @@ static NSString *kCollectionViewIdentifier = @"Cells";
 {
     // Generate between 20 - 40 cells for each section
     
-    return 20 + arc4random_uniform(21);
+    return 6; //20 + arc4random_uniform(21);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return [self allSectionColors].count;
+    return 3; //[self allSectionColors].count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    // Custom cell
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewIdentifier forIndexPath:indexPath];
+    // Add image view,...
     cell.backgroundColor = [self allSectionColors][indexPath.section];
     return cell;
 }
