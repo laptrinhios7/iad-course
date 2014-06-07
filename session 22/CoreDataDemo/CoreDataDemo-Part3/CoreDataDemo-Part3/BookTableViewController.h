@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BookActionViewController.h"
 
-@interface BookTableViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
+@interface BookTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *books;
-@property (strong, nonatomic) NSMutableArray *searchResult;
-
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

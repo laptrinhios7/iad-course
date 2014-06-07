@@ -13,7 +13,6 @@
 		80A97D8F1942D2A3001872B9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A97D8E1942D2A3001872B9 /* CoreData.framework */; };
 		80A97D951942D2A3001872B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80A97D931942D2A3001872B9 /* InfoPlist.strings */; };
 		80A97D971942D2A3001872B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A97D961942D2A3001872B9 /* main.m */; };
-		80A97D9E1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80A97D9C1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodeld */; };
 		80A97DA01942D2A3001872B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80A97D9F1942D2A3001872B9 /* Images.xcassets */; };
 		80A97DA71942D2A3001872B9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A97DA61942D2A3001872B9 /* XCTest.framework */; };
 		80A97DA81942D2A3001872B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A97D881942D2A3001872B9 /* Foundation.framework */; };
@@ -48,7 +47,6 @@
 		80A97D941942D2A3001872B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		80A97D961942D2A3001872B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80A97D981942D2A3001872B9 /* CoreDataDemo-Part3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreDataDemo-Part3-Prefix.pch"; sourceTree = "<group>"; };
-		80A97D9D1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDemo_Part3.xcdatamodel; sourceTree = "<group>"; };
 		80A97D9F1942D2A3001872B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80A97DA51942D2A3001872B9 /* CoreDataDemo-Part3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataDemo-Part3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A97DA61942D2A3001872B9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -134,7 +132,6 @@
 				80A97DC01942D2F5001872B9 /* Main.storyboard */,
 				80A97DC41942D2F5001872B9 /* BookModel.xcdatamodeld */,
 				80A97D9F1942D2A3001872B9 /* Images.xcassets */,
-				80A97D9C1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodeld */,
 				80A97D911942D2A3001872B9 /* Supporting Files */,
 			);
 			path = "CoreDataDemo-Part3";
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A97DC91942D2F5001872B9 /* BookTableViewController.m in Sources */,
-				80A97D9E1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodeld in Sources */,
 				80A97DC81942D2F5001872B9 /* BookActionViewController.m in Sources */,
 				80A97D971942D2A3001872B9 /* main.m in Sources */,
 				80A97DCA1942D2F5001872B9 /* BookModel.xcdatamodeld in Sources */,
@@ -467,6 +463,7 @@
 				80A97DB91942D2A3001872B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80A97DBA1942D2A3001872B9 /* Build configuration list for PBXNativeTarget "CoreDataDemo-Part3Tests" */ = {
 			isa = XCConfigurationList;
@@ -475,20 +472,11 @@
 				80A97DBC1942D2A3001872B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		80A97D9C1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				80A97D9D1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodel */,
-			);
-			currentVersion = 80A97D9D1942D2A3001872B9 /* CoreDataDemo_Part3.xcdatamodel */;
-			path = CoreDataDemo_Part3.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		80A97DC41942D2F5001872B9 /* BookModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

@@ -11,5 +11,6 @@
 @interface BookTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *books;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

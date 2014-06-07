@@ -15,7 +15,7 @@
 @implementation BookTableViewController
 
 @synthesize books;
-@synthesize searchResult;
+@synthesize searchBar;
 
 
 // Retrieve managed object context and later save the device data
@@ -56,7 +56,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    searchBar.delegate = (id)self;
+    [self filter:@""];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,24 +70,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        return [searchResult count];
-        
-    } else
-    {
-        return [books count];
-        
-    }
+    return [books count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,17 +86,9 @@
     
     // Configure the cell...
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        NSManagedObject *book = [searchResult objectAtIndex:indexPath.row];
-        [cell.textLabel setText:[NSString stringWithFormat:@"%@ - %@", [book valueForKey:@"title"], [book valueForKey:@"author"]]];
-        [cell.detailTextLabel setText:[book valueForKey:@"isbn"]];
-
-    } else {
-        NSManagedObject *book = [books objectAtIndex:indexPath.row];
-        [cell.textLabel setText:[NSString stringWithFormat:@"%@ - %@", [book valueForKey:@"title"], [book valueForKey:@"author"]]];
-        [cell.detailTextLabel setText:[book valueForKey:@"isbn"]];
-
-    }
+    NSManagedObject *book = [books objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ - %@", [book valueForKey:@"title"], [book valueForKey:@"author"]]];
+    [cell.detailTextLabel setText:[book valueForKey:@"isbn"]];
     
     return cell;
 }
@@ -142,7 +125,6 @@
   
 }
 
-
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
@@ -159,9 +141,7 @@
 }
 */
 
-
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -177,44 +157,44 @@
     
 }
 
-
-#pragma mark -
-#pragma mark Content Filtering
-
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+#pragma mark - Table Searching
+-(void)filter:(NSString*)text
 {
-	NSLog(@"Previous Search Results were removed.");
-	[self.searchResult removeAllObjects];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    books = [[NSMutableArray alloc] init];
     
-	for (NSManagedObject *book in self.books)
-	{
-		NSString *title = [book valueForKey:@"title"];
-        if ([scope isEqualToString:@"All"] || [title isEqualToString:scope])
-		{
-			NSComparisonResult result = [title compare:searchText
-                                                   options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)
-                                                     range:NSMakeRange(0, [searchText length])];
-            if (result == NSOrderedSame)
-			{
-				[self.searchResult addObject:book];
-            }
-		}
-	}
+    // Create our fetch request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    // Define the entity we are looking for
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    // Define how we want our entities to be sorted
+    NSSortDescriptor* sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    NSArray* sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // If we are searching for anything...
+    if(text.length > 0)
+    {
+        // Define how we want our entities to be filtered
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(title CONTAINS[c] %@) OR (author CONTAINS[c] %@)", text, text];
+        [fetchRequest setPredicate:predicate];
+    }
+    
+    NSError *error;
+    
+    // Finally, reload the table data
+    NSArray* loadedEntities = [context executeFetchRequest:fetchRequest error:&error];
+    books = [[NSMutableArray alloc] initWithArray:loadedEntities];
+    
+    [self.tableView reloadData];
 }
 
-#pragma mark -
-#pragma mark UISearchDisplayController Delegate Methods
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+-(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
 {
-    [self filterContentForSearchText:searchString scope:@"All"];
-    return YES;
-}
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:@"All"];
-    return YES;
+    [self filter:text];
 }
 
 @end

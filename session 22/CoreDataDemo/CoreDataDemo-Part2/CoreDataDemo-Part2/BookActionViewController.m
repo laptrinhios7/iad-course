@@ -48,6 +48,7 @@
     // Do any additional setup after loading the view.
     if (book)
     {
+        self.navigationItem.title = @"Book Details";
         [isbnInput setText:[book valueForKey:@"isbn"]];
         [titleInput setText:[book valueForKey:@"title"]];
         [authorInput setText:[book valueForKey:@"author"]];

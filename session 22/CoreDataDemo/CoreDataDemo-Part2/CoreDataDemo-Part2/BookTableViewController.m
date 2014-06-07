@@ -67,14 +67,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return books.count;
 }
@@ -120,9 +118,7 @@
         [books removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-  
 }
-
 
 /*
 // Override to support rearranging the table view.
@@ -140,7 +136,6 @@
 }
 */
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -151,11 +146,9 @@
     if ([[segue identifier] isEqualToString:@"UpdateBook"])
     {
         NSManagedObject *selectedBook = [books objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-        
         BookActionViewController *bookActionViewController = segue.destinationViewController;
         bookActionViewController.book = selectedBook;
     }
-    
 }
 
 @end
