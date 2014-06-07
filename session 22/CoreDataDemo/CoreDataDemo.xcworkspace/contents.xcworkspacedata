@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CoreDataDemo-Part3/CoreDataDemo-Part3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreDataDemo-Part2/CoreDataDemo-Part2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreDataDemo-Part1/CoreDataDemo-Part1.xcodeproj">
+   </FileRef>
+</Workspace>
